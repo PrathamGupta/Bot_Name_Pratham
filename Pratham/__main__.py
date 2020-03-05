@@ -29,7 +29,7 @@ async def main(request):
 
 	event = sansio.Event.from_http(request.headers, body, secret=secret)
 	async with aiohttp.ClientSession() as session:
-        gh = gh_aiohttp.GitHubAPI(session, "prathamgupta", oauth_token=oauth_token)
+        gh = gh_aiohttp.GitHubAPI(session, "PrathamGupta", oauth_token=oauth_token)
 		# Enter your username above in <USERNAME> field
         await router.dispatch(event, gh)
 	return web.Response(status=200)
