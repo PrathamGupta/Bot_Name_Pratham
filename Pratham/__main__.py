@@ -15,7 +15,7 @@ async def issue_opened_event(event, gh, *args, **kwargs):
 	## TODO
 	url = None
 	# Get the comment url from the event data
-	url=event.comments_url
+	url=event['issue']['comments_url']
 	# After getting the url, set it to the variable url
 	# and push the changes.
 	message = "Hello There!!"
